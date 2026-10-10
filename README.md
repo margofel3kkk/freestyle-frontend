@@ -1,1 +1,1 @@
-(Click Here)[https://freestyle.margofel3k.me]
+[Click Here](https://freestyle.margofel3k.me)
