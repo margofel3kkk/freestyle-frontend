@@ -46,8 +46,11 @@ export default function RandomWords() {
     return (
         <div className="flex justify-center items-center">
             <div className="mx-auto mt-60 w-fit rounded border-2 border-white p-8 text-center">
-                <p id="current-word">{currentWord != "" ? currentWord : "Kliknij poniżej"}</p>
-                <input type="button" className="cursor-pointer" onClick={randomWord} value="Wylosuj słowo" />
+                <div className="pb-5">
+                    <p className="text-[20px]">Wylosowane słowo:</p>
+                    <p id="current-word" className="font-bold">{currentWord != "" ? currentWord : "Brak"}</p>
+                </div>
+                <input type="button" className="cursor-pointer transition duration-300 ease-in-out hover:scale-105" onClick={randomWord} value="Wylosuj słowo"/>
                 <p>Automatyczna zmiana słowa co 10 sekund</p>
                 <input type="checkbox" onChange={toggleAutoWord}/>
             </div>
