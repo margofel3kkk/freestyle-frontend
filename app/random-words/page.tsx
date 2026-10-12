@@ -46,13 +46,15 @@ export default function RandomWords() {
     }
 
     return (
-        <div className="mx-auto mt-60 w-150 h-80 rounded border-2 border-current p-8 text-center shadow-xl/30 flex flex-col justify-between items-center gap-7">
-            <div className="">
-                <p className="text-[20px]">Wylosowane słowo:</p>
-                <p id="current-word" className="font-bold pb-5">{currentWord != "" ? currentWord : "Brak"}</p>
-                <input type="button" className="cursor-pointer transition duration-300 ease-in-out hover:scale-105" onClick={randomWord} value="Wylosuj słowo"/>
+        <div>
+            <div className="mx-auto mt-60 w-150 h-80 rounded border-2 border-current p-8 text-center shadow-xl/30 flex flex-col justify-between items-center gap-7">
+                <div className="">
+                    <p className="text-[20px]">Wylosowane słowo:</p>
+                    <p id="current-word" className="font-bold pb-5">{currentWord != "" ? currentWord : "Brak"}</p>
+                    <input type="button" className="cursor-pointer transition duration-300 ease-in-out hover:scale-105" onClick={randomWord} value="Wylosuj słowo"/>
+                </div>
+                <FormControlLabel control={<Switch onChange={toggleAutoWord}/>} label="Auto word"/>
             </div>
-            <FormControlLabel control={<Switch onChange={toggleAutoWord}/>} label="Auto word"/>
         </div>
     )
 }
